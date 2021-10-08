@@ -20,15 +20,15 @@
         <div class="space-y-12 dark:bg-coolGray-800 dark:text-coolGray-100">
             <header class="p-4">
                 <div class="container flex justify-between h-16 mx-auto">
-                    <a href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                    <a href="{{ url_for('index') }}" aria-label="Back to homepage" class="flex items-center p-2">
                         <i class="fas fa-coffee"></i>
                     </a>
                     <ul class="items-stretch hidden space-x-3 md:flex">
                         <li class="flex">
-                            <a href="#" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">About</a>
+                            <a href="{{ url_for('hello') }}" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">Hello</a>
                         </li>
                         <li class="flex">
-                            <a href="#" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">Contact</a>
+                            <a href="{{ url_for('list_coins') }}" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">Crypto</a>
                         </li>
                     </ul>
                 </div>
