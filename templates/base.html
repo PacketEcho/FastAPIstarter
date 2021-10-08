@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>FastAPI Starter</title>
+
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style>
+            body {
+                background: url({{ url_for('static', path='/unsplash.jpg') }}) no-repeat fixed center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="space-y-12 dark:bg-coolGray-800 dark:text-coolGray-100">
+            <header class="p-4">
+                <div class="container flex justify-between h-16 mx-auto">
+                    <a href="#" aria-label="Back to homepage" class="flex items-center p-2">
+                        <i class="fas fa-coffee"></i>
+                    </a>
+                    <ul class="items-stretch hidden space-x-3 md:flex">
+                        <li class="flex">
+                            <a href="#" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">About</a>
+                        </li>
+                        <li class="flex">
+                            <a href="#" class="flex items-center -mb-0.5 border-b-2 px-4 dark:border-transparent">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <section>
+                <div class="container flex flex-col items-center px-4 py-8 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
+                    {% block content %}{% endblock %}
+                </div>
+            </section>
+            <footer>
+                <div class="container flex flex-col p-4 mx-auto md:p-8 lg:flex-row">
+                    <div class="flex flex-col justify-center pt-6 lg:pt-0">
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://github.com/PacketEcho/FastAPIstarter" class="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 dark:bg-violet-400 dark:text-coolGray-900">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
