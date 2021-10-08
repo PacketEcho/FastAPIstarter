@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p class="px-8 mt-8 mb-12 text-lg">
+    {% for coin in output %}
+        {{ coin }}<br>
+    {% endfor %}
+</p>
+{% endblock %}

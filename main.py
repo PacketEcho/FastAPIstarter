@@ -3,7 +3,11 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 
+from routers import crypto
+
 app = FastAPI()
+app.include_router(crypto.router)
+
 templates = Jinja2Templates(directory="templates/")
 
 
